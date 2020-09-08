@@ -17,6 +17,9 @@ To do this:
     - react-ticker
     - material-ui/core
     - material-ui/icons
+    - nodemon
+    - express
+    - mongoose
 3. To set up firebase, go to the [firebase website](https://firebase.google.com/)
     1. If you haven't done so, make an account
     2. Create a new project and name it (Make sure you tick firebase hosting)
