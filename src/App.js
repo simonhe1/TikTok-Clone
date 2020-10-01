@@ -1,29 +1,55 @@
-import React, {useState, useEffect} from 'react';
-import db from './firebase';
-import './App.css';
-import Video from './Video';
+import React, { useState, useEffect } from "react";
+import db from "./firebase";
+import "./App.css";
+import Video from "./Video";
+import { Search, Inbox, AddBox, Home, Person } from "@material-ui/icons";
 
 function App() {
-  const [videos,setVideos] = useState([]);
+  const [videos, setVideos] = useState([]);
 
   useEffect(() => {
-    db.collection('videos').onSnapshot(snapshot => 
-      setVideos(snapshot.docs.map(doc => doc.data()))
-    )
-  },[videos])
+    db.collection("videos").onSnapshot((snapshot) =>
+      setVideos(snapshot.docs.map((doc) => doc.data()))
+    );
+  }, [videos]);
 
   return (
     <div className="app">
       <div className="app_videos">
-        {videos.map(({url,channel,description,song,likes,messages,shares}) => <Video 
-          url={url}
-          channel={channel}
-          description={description}
-          song={song}
-          likes={likes}
-          messages={messages}
-          shares={shares}
-        />)}
+        {videos.map(
+          ({ url, channel, description, song, likes, messages, shares }) => (
+            <Video
+              url={url}
+              channel={channel}
+              description={description}
+              song={song}
+              likes={likes}
+              messages={messages}
+              shares={shares}
+            />
+          )
+        )}
+      </div>
+      <div className="app_dashboard">
+        <div className="app_dashboard_option">
+          <Home />
+          <h5>Home</h5>
+        </div>
+        <div className="app_dashboard_option">
+          <Search />
+          <h5>Discover</h5>
+        </div>
+        <div className="app_dashboard_option">
+          <AddBox id="app_dashboard_add" />
+        </div>
+        <div className="app_dashboard_option">
+          <Inbox />
+          <h5>Inbox</h5>
+        </div>
+        <div className="app_dashboard_option">
+          <Person />
+          <h5>Me</h5>
+        </div>
       </div>
     </div>
   );
