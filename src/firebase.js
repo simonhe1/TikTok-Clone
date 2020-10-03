@@ -1,5 +1,5 @@
-import firebase from 'firebase';
-require('dotenv').config();
+import firebase from "firebase";
+require("dotenv").config();
 
 // const firebaseConfig = {
 //     apiKey: `${process.env.FIREBASE_APIKEY}`,
@@ -10,17 +10,19 @@ require('dotenv').config();
 //     messagingSenderId: `${process.env.FIREBASE_MESSAGING_SENDER_ID}`,
 //     appId: `${process.env.FIREBASE_APP_ID}`
 //   };
-  const firebaseConfig = {
-    apiKey: "AIzaSyDjtonvPyh9m093TveFdlcliNfXdpQN8LA",
-    authDomain: "tiktok-clone-ab6ce.firebaseapp.com",
-    databaseURL: "https://tiktok-clone-ab6ce.firebaseio.com",
-    projectId: "tiktok-clone-ab6ce",
-    storageBucket: "tiktok-clone-ab6ce.appspot.com",
-    messagingSenderId: "1034328150911",
-    appId: "1:1034328150911:web:be0818300d69850512404a"
-  };
+const firebaseConfig = {
+  apiKey: "AIzaSyDjtonvPyh9m093TveFdlcliNfXdpQN8LA",
+  authDomain: "tiktok-clone-ab6ce.firebaseapp.com",
+  databaseURL: "https://tiktok-clone-ab6ce.firebaseio.com",
+  projectId: "tiktok-clone-ab6ce",
+  storageBucket: "tiktok-clone-ab6ce.appspot.com",
+  messagingSenderId: "1034328150911",
+  appId: "1:1034328150911:web:be0818300d69850512404a",
+};
 
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 const db = firebaseApp.firestore();
+const storage = firebase.storage();
 
+export { storage };
 export default db;

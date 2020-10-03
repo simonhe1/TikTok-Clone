@@ -1,0 +1,9 @@
+#add_video_icon {
+  font-size: 40px;
+}
+
+.add_video_modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

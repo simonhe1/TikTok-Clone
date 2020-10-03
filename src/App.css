@@ -25,10 +25,6 @@ html {
   align-items: center;
 }
 
-#app_dashboard_add {
-  font-size: 40px;
-}
-
 .app_dashboard_option {
   padding: 0 7%;
   justify-content: center;

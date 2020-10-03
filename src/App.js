@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import db from "./firebase";
 import "./App.css";
 import Video from "./Video";
-import { Search, Inbox, AddBox, Home, Person } from "@material-ui/icons";
+import { Search, Inbox, Home, Person } from "@material-ui/icons";
+import AddVideo from "./AddVideo";
 
 function App() {
   const [videos, setVideos] = useState([]);
@@ -40,7 +41,7 @@ function App() {
           <h5>Discover</h5>
         </div>
         <div className="app_dashboard_option">
-          <AddBox id="app_dashboard_add" />
+          <AddVideo />
         </div>
         <div className="app_dashboard_option">
           <Inbox />
