@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { AddBox } from "@material-ui/icons";
 import "./AddVideo.css";
-import { Modal, Backdrop, Fade } from "@material-ui/core";
+import { Modal, Fade } from "@material-ui/core";
 
 const AddVideo = () => {
   const [open, setOpen] = useState(false);
@@ -24,17 +24,15 @@ const AddVideo = () => {
         open={open}
         onClose={handleClose}
         closeAfterTransition
-        BackdropComponent={Backdrop}
-        BackdropProps={{
-          timeout: 500,
-        }}
       >
         <Fade in={open}>
-          <div>
-            <h2 id="transition-modal-title">Transition modal</h2>
-            <p id="transition-modal-description">
-              react-transition-group animates me.
-            </p>
+          <div className="modal_box">
+            <h2 id="modal_username">@larrygao</h2>
+            <h2>Description</h2>
+            <textarea id="description" />
+            <h2>Song</h2>
+            <input type="text" id="song" />
+            <input type="file" accept="video/*" />
           </div>
         </Fade>
       </Modal>
