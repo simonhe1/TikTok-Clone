@@ -1,0 +1,20 @@
+.home {
+  position: relative;
+  height: 661px;
+  width: 80%;
+  max-width: 500px;
+  overflow: scroll;
+  border-radius: 20px;
+  scroll-snap-type: y mandatory;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.home::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, and Firefox */
+.home {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
