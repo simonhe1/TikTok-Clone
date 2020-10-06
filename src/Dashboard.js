@@ -15,9 +15,9 @@ const Dashboard = () => {
         <Search />
         <h5>Discover</h5>
       </Link>
-      <Link className="dashboard_option">
-        <AddVideo />
-      </Link>
+      <div className="dashboard_option">
+        <AddVideo id="add_video_button" />
+      </div>
       <Link to="/messages" className="dashboard_option">
         <Inbox />
         <h5>Inbox</h5>
